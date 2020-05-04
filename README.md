@@ -5,6 +5,10 @@ Package to scrape ```www.brainly.co.id```
 ```
 npm install @defrindr/brainly-scraper@1.0.0
 ```
+or
+```
+npm i brainly-scraper
+```
 
 ## Example
 ```
