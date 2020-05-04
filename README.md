@@ -3,7 +3,7 @@ Package to scrape ```www.brainly.co.id```
 
 ## Install
 ```
-npm i brainly-scraper
+npm install @defrindr/brainly-scraper@1.0.0
 ```
 
 ## Example
