@@ -49,6 +49,8 @@ Output :
   }
 ]
 ```
+	Tips :
+	You can use JSON.stringify() to get string output
 
 ## Contribution
 Contributions are welcome.
