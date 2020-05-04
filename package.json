@@ -24,6 +24,9 @@
     "url": "https://github.com/defrindr/brainly-scraper/issues"
   },
   "homepage": "https://github.com/defrindr/brainly-scraper#readme",
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
+  },
   "dependencies": {
     "cheerio": "^1.0.0-rc.3",
     "request": "^2.88.2",
