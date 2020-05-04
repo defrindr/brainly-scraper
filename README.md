@@ -1,13 +1,14 @@
 # BrainlyScrapper
+Package to scrape ```www.brainly.co.id```
 
 ## Install
 ```
-git clone https://github.com/defrindr/BrainlyScrapper.git
+npm i brainly-scraper
 ```
 
-## Sample
+## Example
 ```
-brainly = require('./brainly.js');
+const brainly = require('./brainly.js');
 
 
 brainly("nkri").then(res => {
