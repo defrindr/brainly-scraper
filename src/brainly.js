@@ -1,11 +1,15 @@
 /**
- * Defri Indra Mahardika
- * Updated on 4 April 2020
+ * Hanif Dwy Putra S
+ * Updated on 6 Juni 2020
  * 
  */
 
 // depend package
 const req = require('request-promise');
+
+// configurations
+const config = require('../config.json');
+
 
 // setting format output dari graphql
 const formatGraphQl = `query SearchQuery($query: String!, $first: Int!, $after: ID) {\n	questionSearch(query: $query, first: $first, after: $after) {\n	edges {\n	  node {\ncontent\n		attachments{\nurl\n}\n		answers {\n			nodes {\ncontent\n				attachments{\nurl\n}\n}\n}\n}\n}\n}\n}\n`
@@ -24,7 +28,7 @@ const Brainly = async(q,count = 5) => {
 			json: true,
 			headers: {
 				"content-type": "application/json; charset=utf-8",
-				"user-agent": "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:65.0) Gecko/20100101 Firefox/65.0"
+				"user-agent": config['user-agent']
 			},
 			body : {
 				"operationName":"SearchQuery",
@@ -77,7 +81,7 @@ const Brainly = async(q,count = 5) => {
 					finalData.push({
 						"pertanyaan": clean(source.node.content),
 						"jawaban": jawaban,
-						"questionMedia": Qmedia,
+						"fotoPertanyaan": Qmedia,
 					})
 				})
 	
