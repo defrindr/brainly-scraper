@@ -1,6 +1,6 @@
 {
   "name": "brainly-scraper",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "Brainly scrape for gethering information",
   "main": "index.js",
   "scripts": {
@@ -28,8 +28,8 @@
     "registry": "https://npm.pkg.github.com/"
   },
   "dependencies": {
-    "cheerio": "^1.0.0-rc.3",
-    "request": "^2.88.2",
-    "request-promise": "^4.2.5"
+    "cheerio": "*",
+    "request": "*",
+    "request-promise": "*"
   }
 }
