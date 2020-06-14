@@ -48,7 +48,7 @@ const Brainly = async(q,count = 5) => {
 		return data.replace(regex, '')
 	}
 
-	return await req.post(services).then(res => {
+	return await req.get(services).then(res => {
 	
 			sources = res.data.questionSearch.edges
 			
