@@ -12,7 +12,7 @@ npm i brainly-scraper
 
 ## Example
 ```
-const brainly = require('./brainly.js');
+const brainly = require('brainly-scraper');
 
 
 brainly("nkri").then(res => {
