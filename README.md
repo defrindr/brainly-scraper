@@ -12,7 +12,7 @@ npm i brainly-scraper
 
 ## Example
 ```javascript
-const brainly = require('./brainly.js');
+const brainly = require('brainly-scraper');
 
 
 brainly("nkri").then(res => {
@@ -20,7 +20,7 @@ brainly("nkri").then(res => {
 })
 ```
 Output : 
-```json
+```javascript
 [
   {
     pertanyaan: 'pengertian NKRI, tujuan NKRI, unsur NKRI, dan fungsi NKRI',
