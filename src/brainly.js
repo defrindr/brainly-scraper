@@ -82,7 +82,7 @@ const Brainly = async(q,count = 5) => {
 					finalData.push({
 						"pertanyaan": clean(source.node.content),
 						"jawaban": jawaban,
-						"fotoPertanyaan": Qmedia,
+						"questionMedia": Qmedia,
 					})
 				})
 	
