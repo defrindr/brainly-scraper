@@ -30,6 +30,7 @@
   "dependencies": {
     "cheerio": "*",
     "request": "*",
-    "request-promise": "*"
+    "request-promise": "*",
+    "proxy-lists": "*"
   }
 }
