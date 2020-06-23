@@ -26,6 +26,7 @@ const Brainly = async(q,count = 5) => {
 	let services = {
 			uri:'https://brainly.co.id/graphql/id',
 			json: true,
+                        proxy: 'http://118.97.41.50:8080',
 			headers: {
 				"content-type": "application/json; charset=utf-8",
 				"user-agent": config['user-agent']
