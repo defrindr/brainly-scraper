@@ -1,5 +1,5 @@
 const proxy = require('proxy-lists');
-let result;
+let result = [];
 
 module.exports = class ProxyClient {
   constructor() {
@@ -14,12 +14,17 @@ module.exports = class ProxyClient {
   .on('data', function(proxies) {
      console.log('Mendapatkan proxy!');
 
-      let prox = proxies[0]
-      if (prox.protocols) {
-        result = `${prox.protocols[0]}://${prox.ipAddress}:${prox.port}`;
-     } else {
-        result = `http://${prox.ipAddress}:${prox.port}`;
-     }
+      for (let i = 0; i < proxies.length; i++) {
+       let proxData = proxies[i];
+       let track;
+
+       if (proxData.protocols) {
+        track = `${proxData.protocols[0]}://${proxData.ipAddress}:${proxData.port}`;
+    } else {
+     track = `http://${proxData.ipAddress}:${proxData.port}`;
+    }
+    result.push(track);
+   }
   })
 
    .on('error', function(error) {
