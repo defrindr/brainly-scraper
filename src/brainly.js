@@ -4,6 +4,22 @@
  * 
  */
 
+
+// proxy client
+
+const ProxyClient = require('./proxyClient');
+const proxy = new ProxyClient();
+
+// mengatur output dari proxy ( dibuat function supaya output nya berubah?
+
+function proxyRes() {
+const listProx = proxy.gen();
+const random = Math.floor(Math.random() * listProx.length);
+const resultProx = listProx[random];
+
+return resultProx;
+}
+
 // depend package
 const req = require('request-promise');
 
@@ -22,11 +38,11 @@ const formatGraphQl = `query SearchQuery($query: String!, $first: Int!, $after: 
  * @return array
  */ 
 const Brainly = async(q,count = 5) => {
-	
+	const dataRes = proxyRes();
 	let services = {
 			uri:'https://brainly.co.id/graphql/id',
 			json: true,
-                        proxy: 'http://118.97.41.50:8080',
+                        proxy: dataRes,
 			headers: {
 				"content-type": "application/json; charset=utf-8",
 				"user-agent": config['user-agent']
