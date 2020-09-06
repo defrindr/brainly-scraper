@@ -3,6 +3,7 @@
  * Updated on 4 April 2020
  * 
  */
+'use strict';
 const Brainly = require('./src/brainly.js');
 
 const brainly = async(query, count=5) => {
@@ -17,3 +18,4 @@ const brainly = async(query, count=5) => {
 };
 
 module.exports = brainly;
+exports.brainly = brainly;
