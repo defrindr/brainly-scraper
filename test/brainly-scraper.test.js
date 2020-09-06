@@ -9,7 +9,7 @@ describe('Brainly Scraper TDD', function(){
     });
     it('Simple Usage', function(done) {
         brainly("nkri", 5).then(res => {
-            if (res.total !== 5) done("Length is not match");
+            if (res.length !== 5) done("Length is not match");
             done();
         }).catch(error => {
             done(error);
@@ -18,7 +18,7 @@ describe('Brainly Scraper TDD', function(){
     it('Test Limit', function (done) {
         for (let i=0;i<20;i++){
             brainly("nkri").then(res => {
-                if (res.total === 0) done("Error !!!");
+                if (res.length === 0) done("Error !!!");
             })
         }
         done();

@@ -15,6 +15,7 @@ const format_graphql = `query SearchQuery($query: String!, $first: Int!, $after:
  * @return {Array}
  */
 const Brainly = async (query, count) => {
+	_required(count);
 	_required(query); // check value is null or not
 
 	let service = {
@@ -65,14 +66,14 @@ const Brainly = async (query, count) => {
 
 			return {
 				'success': true,
-				'total': final_data.length,
+				'length': final_data.length,
 				'message': 'Request Success',
 				'data': final_data
 			};
 		} else {
 			return {
 				'success': true,
-				'total': 0,
+				'length': 0,
 				'message': 'Data not found',
 				'data': []
 			};
