@@ -1,6 +1,6 @@
 {
   "name": "brainly-scraper",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Brainly scrape for gethering information",
   "main": "index.js",
   "module": "index.js",
