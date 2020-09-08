@@ -1,6 +1,6 @@
 # Brainly Scraper
 
-Library to scrape ```www.brainly.cocom```
+Library to scrape ```www.brainly.com```
 
 ## Installation
 
@@ -46,7 +46,7 @@ Output :
 ```javascript
 {
     "success": true,
-    "total": 5,
+    "length": 5,
     "message": "Request Success",
     "data": [{
         "pertanyaan": "pengertian NKRI, tujuan NKRI, unsur NKRI, dan fungsi NKRI",
