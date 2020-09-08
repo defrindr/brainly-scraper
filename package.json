@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "Brainly scrape for gethering information",
   "main": "index.js",
+  "module": "index.js",
   "scripts": {
     "test": "mocha"
   },

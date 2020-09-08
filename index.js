@@ -4,10 +4,10 @@
  * 
  */
 'use strict';
-const Brainly = require('./src/brainly.js');
+const Base = require('./src/brainly.js');
 
-const brainly = async(query, count=5) => {
-    let response = await Brainly(query, count).catch(error => {
+const Brainly = async (query, count = 5) => {
+    let response = await Base(query, count).catch(error => {
         return {
             'success': false,
             'message': error,
@@ -17,5 +17,4 @@ const brainly = async(query, count=5) => {
     return response;
 };
 
-module.exports = brainly;
-exports.brainly = brainly;
+module.exports = Brainly;
