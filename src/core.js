@@ -3,7 +3,9 @@
  * @param {*} variable 
  */
 const _required = (variable) => {
-    if (variable === "" || variable === undefined) throw ("Param cant be blank");
+    if (variable === "" || variable === undefined) {
+        throw ("Param cant be blank");
+    }
 }
 
 /**
@@ -12,7 +14,7 @@ const _required = (variable) => {
  * @return {String}
  */
 const clean = (data) => {
-    regex = /(<([^>]+)>)/ig;
+    let regex = /(<([^>]+)>)/ig;
     data = data.replace(/(<br?\s?\/>)/ig, ' \n');
     return data.replace(regex, '');
 };
