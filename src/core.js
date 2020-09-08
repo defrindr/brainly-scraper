@@ -3,7 +3,7 @@
  * @param {*} variable 
  */
 const _required = (variable) => {
-    if (variable === "" || variable === undefined) throw("Param cant be blank");
+    if (variable === "" || variable === undefined) throw ("Param cant be blank");
 }
 
 /**

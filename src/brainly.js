@@ -1,12 +1,13 @@
-const req = require('request-promise');
+'use strict';
 
+const req = require('request-promise');
 const {
 	_required,
 	clean
-} = require('./core')
+} = require('./core');
 
 // format output from graphql
-const format_graphql = `query SearchQuery($query: String!, $first: Int!, $after: ID) {\n	questionSearch(query: $query, first: $first, after: $after) {\n	edges {\n	  node {\ncontent\n		attachments{\nurl\n}\n		answers {\n			nodes {\ncontent\n				attachments{\nurl\n}\n}\n}\n}\n}\n}\n}\n`
+const format_graphql = `query SearchQuery($query: String!, $first: Int!, $after: ID) {\n	questionSearch(query: $query, first: $first, after: $after) {\n	edges {\n	  node {\ncontent\n		attachments{\nurl\n}\n		answers {\n			nodes {\ncontent\n				attachments{\nurl\n}\n}\n}\n}\n}\n}\n}\n`;
 
 /**
  * 
@@ -15,8 +16,9 @@ const format_graphql = `query SearchQuery($query: String!, $first: Int!, $after:
  * @return {Array}
  */
 const Brainly = async (query, count) => {
+	// check value is null or not
 	_required(count);
-	_required(query); // check value is null or not
+	_required(query);
 
 	let service = {
 		uri: 'https://brainly.com/graphql/id',
@@ -79,6 +81,6 @@ const Brainly = async (query, count) => {
 			};
 		}
 	});
-}
+};
 
-module.exports = Brainly
+module.exports = Brainly;
