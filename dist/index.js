@@ -9,7 +9,7 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
     });
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.Brainly = void 0;
+exports.default = void 0;
 const Brainly_1 = require("./src/Brainly");
 const Brainly = (query, count = 5) => __awaiter(void 0, void 0, void 0, function* () {
     let response = yield Brainly_1.BrainlyDefault(query, count).catch(error => {
@@ -20,4 +20,4 @@ const Brainly = (query, count = 5) => __awaiter(void 0, void 0, void 0, function
     });
     return response;
 });
-exports.Brainly = Brainly;
+exports.default = Brainly;

@@ -11,4 +11,4 @@ declare const Brainly: (query: string, count?: number) => Promise<{
     success: boolean;
     message: any;
 }>;
-export { Brainly };
+export { Brainly as default };
