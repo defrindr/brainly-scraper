@@ -24,7 +24,7 @@ npm i brainly-scraper
 ### Simple Usage
 
 ```javascript
-const brainly = require('brainly-scraper');
+const { Brainly } = require('brainly-scraper');
 
 brainly("nkri").then(res => {
 	console.log(res);
@@ -34,7 +34,7 @@ brainly("nkri").then(res => {
 Or
 
 ```javascript
-import brainly from 'brainly-scraper';
+import { Brainly } from 'brainly-scraper';
 
 brainly("nkri").then(res => {
 	console.log(res);
@@ -92,7 +92,7 @@ Output :
 
 ### Error Response
 ```javascript
-import brainly from 'brainly-scraper';
+import { Brainly } from 'brainly-scraper';
 
 brainly().then(res => {
 	console.log(res);
