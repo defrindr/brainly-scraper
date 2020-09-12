@@ -1,4 +1,4 @@
-import { Brainly } from "../index";
+import Brainly from "../index";
 
 (async () => {
  const data = await Brainly("NKRI");

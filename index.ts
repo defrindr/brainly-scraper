@@ -11,4 +11,4 @@ const Brainly = async (query: string, count = 5) => {
     return response;
 };
 
-export { Brainly };
+export { Brainly as default };
