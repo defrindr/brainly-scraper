@@ -2,8 +2,8 @@
   "name": "brainly-scraper",
   "version": "1.0.2",
   "description": "Brainly scrape for gethering information",
-  "main": "index.js",
-  "module": "index.js",
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
   "scripts": {
     "test": "mocha"
   },
@@ -34,6 +34,7 @@
     "request-promise": "^4.2.5"
   },
   "devDependencies": {
+    "@types/request-promise": "^4.1.46",
     "chai": "^4.2.0",
     "mocha": "^8.1.3"
   }
